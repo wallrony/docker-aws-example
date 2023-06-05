@@ -166,22 +166,3 @@ Com isso, conseguimos configurar o Docker em uma instância EC2 da AWS! Isso faz
 Vale salientar que o Docker, nos dias atuais, não é tão utilizado para ambientes de produção quando se trata de aplicações complexas. Atualmente são utilizadas ferramentas como Kubernetes para orquestrar um conjunto de serviços e ter uma maior abrangência de disponibilidade e observabilidade do que ocorre durante sua execução ou até mesmo em eventuais finalizações ou interrupções da aplicação.
 
 Outro ponto muito importante é que para aplicações com tráfego de dados (ex.: consumo de API externa) é necessário que seja feita uma configuração de certificados SSL para utilização do protocolo HTTPS ao invés do HTTP, cujo não realiza nenhum processo de segurança com os dados que são trafegados.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![#9](https://github.com/wallrony/vite-project-template/assets/49597325/6c1fe18c-ce3c-4c3d-be28-05700d694a89)
-
-![#11](https://github.com/wallrony/vite-project-template/assets/49597325/07251c0d-9327-46a5-9151-c999beaa24fb)
-
