@@ -17,7 +17,7 @@ Com isso, para fins de curiosidade, para executar a aplicação basta seguir os 
 
 Agora, basta abrir o endereço [http://127.0.0.1:5173](http://127.0.0.1:5173) no navegador e você deve ver a seguinte página:
 
-<img width="1383" alt="image" src="https://github.com/wallrony/vite-project-template/assets/49597325/2265920c-e727-434a-a977-460d8fc37df4">
+![image](https://github.com/wallrony/docker-aws-example/assets/49597325/1b09e4d1-71a2-402f-8e83-66f8dbbc5fbd)
 
 Pronto, essa é a aplicação que queremos disponibilizar na AWS.
 
@@ -36,25 +36,25 @@ De início, nós precisamos configurar um ambiente virtual na AWS para podermos 
 
 Para começar, após entrar em uma conta da AWS, iremos dar de cara com o painel principal. Com isso, iremos pesquisar o serviço EC2 na barra de pesquisa principal da AWS:
 
-![#1](https://github.com/wallrony/vite-project-template/assets/49597325/01abace2-9d59-44bd-be99-f9a941ad4dd5)
+![#1](https://github.com/wallrony/docker-aws-example/assets/49597325/127c3a16-a128-4102-82df-a99e4b2981f5)
 
 Na barra de pesquisa, iremos digitar "EC2" e clicaremos na seguinte opção:
 
-![#2](https://github.com/wallrony/vite-project-template/assets/49597325/5781b4d8-d8ba-454f-bdfa-849e642bffda)
+![#2](https://github.com/wallrony/docker-aws-example/assets/49597325/93322efd-0147-409d-b1d9-4d4dac69c793)
 
 Após clicar na opção exibida, iremos entrar na seção de instâncias da EC2 clicando em "Instâncias" ou "Instâncias (em execução)":
 
-![#3](https://github.com/wallrony/vite-project-template/assets/49597325/23322d6e-4d6e-48e9-a146-abb05a788b30)
+![#3](https://github.com/wallrony/docker-aws-example/assets/49597325/26bb26c9-46d8-477d-a61a-9197fcc79e2b)
 
 Após carregar a página de instâncias, clique em "Executar Instância":
 
-![#4](https://github.com/wallrony/vite-project-template/assets/49597325/4615f6c2-190f-4add-b923-a7335f1140c8)
+![#4](https://github.com/wallrony/docker-aws-example/assets/49597325/3dbd7582-d6e6-46cb-97d4-0e0ca0978573)
 
 Com isso você será redirecionado à página de criação de uma nova instância EC2. Temos algumas etapas específicas para seguir e configurar apropriadamente.
 
 Primeiro iremos configurar as partes básicas da instância. De acordo com a imagem abaixo, siga o passo a passo:
 
-![#5](https://github.com/wallrony/vite-project-template/assets/49597325/a44315a0-f240-4e40-aa0b-9cc59a156dcd)
+![#5](https://github.com/wallrony/docker-aws-example/assets/49597325/1991562f-1fee-4763-b3df-0644c313bea6)
 
 1. Digite o nome da sua instância (ex.: "Docker Test");
 2. Selecione o tipo de imagem base da instância EC2 como "Ubuntu";
@@ -62,12 +62,12 @@ Primeiro iremos configurar as partes básicas da instância. De acordo com a ima
 
 Pronto, agora vamos configurar o acesso à instância:
 
-![#6](https://github.com/wallrony/vite-project-template/assets/49597325/46e87824-65ff-4bea-af4f-fe4a71d350c7)
+![#6](https://github.com/wallrony/docker-aws-example/assets/49597325/1f17c791-f773-4348-86a4-d95aafbd4a4f)
 
 1. Caso já tenha uma chave de acesso, é possível selecionar uma já existente no campo de seleção;
 2. Caso não tenha nenhuma chave de acesso, clique no botão "Criar novo par de chaves" e siga o passo a passo abaixo:
 
-> ![#7](https://github.com/wallrony/vite-project-template/assets/49597325/da4980fd-ead9-4322-9da1-975f6e3754a2)
+> ![#7](https://github.com/wallrony/docker-aws-example/assets/49597325/d9d62e01-497c-45b5-907d-84518b78a525)
 > 1. Digite o nome da chave (ex.: "DockerTest" - esse vai ser o nome do arquivo da chave de acesso também);
 > 2. Selecione o tipo da chave como RSA (recomendo a RSA por ser de fácil utilização e amplamente aceito pelo acesso SSH e ainda manter segurança);
 > 3. Selecione o formato da chave privada como ".pem" (pode ser utilizado pelo software OpenSSH, que na maioria das vezes já é instalado em todos os sistemas, seja `Windows`, `Linux` ou `MAC`);
@@ -75,7 +75,7 @@ Pronto, agora vamos configurar o acesso à instância:
 
 Pronto, agora vamos configurar a parte de segurança no acesso externo à instância (regras de entrada à instância). Siga o passo a passo abaixo:
 
-![#8](https://github.com/wallrony/vite-project-template/assets/49597325/c6b2e645-c91c-489e-a407-d99ecf25ccda)
+![#8](https://github.com/wallrony/docker-aws-example/assets/49597325/016597cf-da9d-4a35-956d-1d481dffb390)
 
 1. Selecione criar grupo de segurança caso ainda não tenha nenhum previamente criado;
 2. Selecione para utilizar um grupo de segurança já criado caso já exista um pré-configurado com atribuições que satisfazem o nosso objetivo;
@@ -90,15 +90,15 @@ Com isso, temos a nossa instância basicamente configurada. Como essa documenta�
 
 Para finalizar a criação da instância, precisamos verificar o resumo com a quantidade de instâncias que queremos criar (por padrão 1) e clicar no botão "Executar instância", assim como exibido na imagem abaixo:
 
-![#10](https://github.com/wallrony/vite-project-template/assets/49597325/e149b562-82df-4ab7-adfc-2fc607c55e8c)
+![#10](https://github.com/wallrony/docker-aws-example/assets/49597325/4f59ceeb-4648-4868-9863-0e467faa3f85)
 
 Após um tempo, a página exibirá o status de "Êxito" na criação da instância EC2 (com isso, clique no ID da instância para ser redirecionado à página de detalhes da instância):
 
-![#12](https://github.com/wallrony/vite-project-template/assets/49597325/b22a7777-605a-400b-b75b-0e059e53face)
+![#12](https://github.com/wallrony/docker-aws-example/assets/49597325/757b5d9d-b4cb-4956-ae4e-cb7486f1d58b)
 
 Após acessar a página de detalhes da instância, teremos várias informações dela, incluindo o IP público que será utilizado para acessar a instância via SSH. Logo, copie ela e salve para os próximos passos:
 
-![#13](https://github.com/wallrony/vite-project-template/assets/49597325/e20937da-ddad-4a87-bd32-40918c8d845c)
+![#13](https://github.com/wallrony/docker-aws-example/assets/49597325/6b51e931-60ef-43ff-933a-5ccb13c912d4)
 
 Pronto! Agora temos a nossa instância devidamente configurada e criada, precisamos configurar o ambiente na parte de dentro, conectando via SSH e instalando as ferramentas necessárias.
 
@@ -110,7 +110,7 @@ Para configurar a instância que criamos na etapa anterior, iremos conectar via 
 
 Para conectar via SSH ao nosso serviço, precisamos executar os comandos destacados na seguinte imagem:
 
-![#14](https://github.com/wallrony/vite-project-template/assets/49597325/d0d55509-e8eb-4a58-801e-edbab6a3b77d)
+![#14](https://github.com/wallrony/docker-aws-example/assets/49597325/0f81bfb9-b7b9-4d3f-bd22-fc41445408f5)
 
 1. Executar `chmod 400 /caminho/para/chave_de_acesso.pem` - substitua "/caminho/para/chave_de_acesso.pem" pelo devido caminho para a chave de acesso - a chave de acesso foi baixada após criar ou cadastrada na instância AWS. Esse comando deve ser executado para que essa tenha permissão somente de leitura para que não seja alterada e que seja lida somente pelo usuário cujo baixou a chave;
 2. Executar `ssh -i /caminho/para/chave_de_acesso.pem ubuntu@ip_publico` - substitua "/caminho/para/chave_de_acesso.pem" pelo devido caminho para a chave de acesso e "ip_publico" pelo ip copiado na página de detalhes da instância;
@@ -129,7 +129,7 @@ Evitando uma configuração extra, seguiremos utilizando o protocolo SCP.
 
 Execuremos o comando `scp -i /caminho/para/chave_de_acesso.pem -r /caminho/para/projeto ubuntu@ip_publico`, assim como apresentado na imagem abaixo:
 
-![#15](https://github.com/wallrony/vite-project-template/assets/49597325/abda68e2-3014-4f90-a56b-9326e6423314)
+![#15](https://github.com/wallrony/docker-aws-example/assets/49597325/77394390-a866-420f-a843-b77ece325bf2)
 
 1. Substitua "/caminho/para/chave_de_acesso.pem" pelo devido caminho para a chave de acesso;
 2. Substitua "/caminho/para/projeto" pelo devido caminho do projeto - o parâmetro "-r" é adicionado anterior à esse caminho para indicar que é necessário transferir arquivos de forma recursiva no diretório especificado;
@@ -137,7 +137,7 @@ Execuremos o comando `scp -i /caminho/para/chave_de_acesso.pem -r /caminho/para/
 
 Com isso, entre na instância EC2 com o comando citado anteriormente para acessar com a chave de acesso, e execute o comando `ls -l`. A saída deve ser a mesma que a apresentada na imagem abaixo:
 
-![#16](https://github.com/wallrony/vite-project-template/assets/49597325/424d70f2-66fc-4b94-ac79-e0eeb06366e5)
+![#16](https://github.com/wallrony/docker-aws-example/assets/49597325/ed809078-8ee7-46b1-92f9-89e847de74e6)
 
 Pronto! Temos todos os arquivos necessários para executar o nosso projeto na nossa instância EC2.
 
@@ -153,13 +153,13 @@ Ps. 2: seguindo as recomendações de segurança da documentação oficial do Do
 
 Ainda estando conectado à instância EC2, entraremos na pasta com o nome do projeto (existente na instância EC2) e executaremos o comando `sudo docker compose up`, assim como apresentado na imagem abaixo:
 
-![#17](https://github.com/wallrony/vite-project-template/assets/49597325/65bb6382-2963-4dfb-ab18-d85b0e40eb7e)
+![#17](https://github.com/wallrony/docker-aws-example/assets/49597325/a9fbf623-d069-4b6e-a26f-039473957c88)
 
 No final, temos uma mensagem de informação onde diz que nossa aplicação está sendo executada na porta 80 (HTTP).
 
 Após isso, ao acessar o endereço `http://ip_publico` você deve ser capaz de visualizar a mesma página que conseguimos visualizar quando executando localmente:
 
-![#18](https://github.com/wallrony/vite-project-template/assets/49597325/c528e6c0-30cb-4413-b63e-c09926b90353)
+![#18](https://github.com/wallrony/docker-aws-example/assets/49597325/a1194eda-6c82-44fe-a8e9-a55163fbd6ba)
 
 Com isso, conseguimos configurar o Docker em uma instância EC2 da AWS! Isso faz com que toda vez que tivermos uma atualização ou algum problema de configuração, basta altermos as configurações dos arquivos do Docker e executar apenas um comando para reestruturar a nossa aplicação e torná-la disponível o mais rápido o possível.
 
